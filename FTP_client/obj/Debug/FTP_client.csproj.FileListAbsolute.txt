@@ -1,0 +1,7 @@
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\bin\Debug\FTP_client.exe.config
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\bin\Debug\FTP_client.exe
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\bin\Debug\FTP_client.pdb
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\obj\Debug\FTP_client.csprojAssemblyReference.cache
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\obj\Debug\FTP_client.csproj.CoreCompileInputs.cache
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\obj\Debug\FTP_client.exe
+C:\Users\mammadovh\source\repos\FTP_clientProj\FTP_client\obj\Debug\FTP_client.pdb
