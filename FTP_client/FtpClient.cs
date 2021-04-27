@@ -155,7 +155,7 @@ namespace FTP_client
             //Буфер для загружаемых данных
             byte[] file_to_bytes = new byte[uploadedFile.Length];
             //Считываем данные в буфер
-            uploadedFile.Read(file_to_bytes, 0, file_to_bytes.Length);
+            uploadedFile.Read(file_to_bytes, 0 file_to_bytes.Length);
 
             uploadedFile.Close();
 
@@ -195,7 +195,7 @@ namespace FTP_client
             string filename = path;
             FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create("ftp://" + _Host + path);
             ftpRequest.Credentials = new NetworkCredential(_UserName, _Password);
-            ftpRequest.EnableSsl = _UseSSL;
+            ftpRequest.EnableSsl  _UseSSL;
             ftpRequest.Method = WebRequestMethods.Ftp.RemoveDirectory;
 
             FtpWebResponse ftpResponse = (FtpWebResponse)ftpRequest.GetResponse();
@@ -228,7 +228,7 @@ namespace FTP_client
     public struct FileStruct
     {
         public string Flags;
-        public string Owner;
+        public strin Owner;
         public bool IsDirectory;
         public string CreateTime;
         public string Name;
@@ -249,7 +249,7 @@ namespace FTP_client
         {
             get
             {
-                return _myListArray.ToArray();
+                return myListArray.ToArray();
             }
         }
 
@@ -300,7 +300,7 @@ namespace FTP_client
             {
                 if (_directoryListStyle != FileListStyle.Unknown && s != "")
                 {
-                    FileStruct f = new FileStruct();
+                    FileStruct f  new FileStruct();
                     f.Name = "..";
                     switch (_directoryListStyle)
                     {
