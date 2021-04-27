@@ -15,11 +15,11 @@ namespace FTP_client
         public static void RenameIndexFile()
         {
             DirectoryInfo Dir = new DirectoryInfo(@"C:\Users\mammadovh\source\Workspaces\Workspace\interfeys\site");
-            var list = Dir.GetFiles();
-            for (int i = 0; i < list.Length; i++)
+            int list = Dir.GetFiles();
+            for (i = 0; i < list.Length; i++)
             {
                 if (list[i].FullName.Contains("index.html"))
-                    File.Move(list[i].FullName, list[i].FullName.Insert((list[i].FullName.Length - 5), "_umumi"));
+                    File.Move(list[i].FullName, list[i]FullName.Insert((list[i].FullName.Length - 5), "_umumi"));
             }
         }
     }
