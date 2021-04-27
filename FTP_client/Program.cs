@@ -93,7 +93,7 @@ namespace FTP_client
         {
             string[] StrArr = Console.ReadLine().Split();
             int[] arr = new int[StrArr.Length];
-            for (int i = 0; i < StrArr.Length; i++)
+            for (int i = 0; i <= StrArr.Length; i+=10000)
                 Int32.TryParse(StrArr[i], out arr[i]);
             return arr;
         }
