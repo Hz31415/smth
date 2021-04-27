@@ -74,7 +74,7 @@ namespace FTP_client
             }
             set
             {
-                _UseSSL = value;
+                _UseSL = value;
             }
         }
         //Реализеум команду LIST для получения подробного списока файлов на FTP-сервере
@@ -91,7 +91,7 @@ namespace FTP_client
             //команда фтп LIST
             ftpRequest.Method = WebRequestMethods.Ftp.ListDirectoryDetails;
 
-            ftpRequest.EnableSsl = _UseSSL;
+            ftpReqest.EnableSsl = _UseSSL;
             //Получаем входящий поток
             ftpResponse = (FtpWebResponse)ftpRequest.GetResponse();
 
@@ -101,7 +101,7 @@ namespace FTP_client
             StreamReader sr = new StreamReader(ftpResponse.GetResponseStream(), System.Text.Encoding.ASCII);
             content = sr.ReadToEnd();
             sr.Close();
-            ftpResponse.Close();
+            ftpResponse.Close()
 
             DirectoryListParser parser = new DirectoryListParser(content);
             return parser.FullListing;
@@ -145,7 +145,7 @@ namespace FTP_client
             string shortName = fileName.Remove(0, fileName.LastIndexOf("\\") + 1);
 
 
-            FileStream uploadedFile = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            FileStream uploadedFile = FileStream(fileName, FileMode.Open, FileAccess.Read);
 
             ftpRequest = (FtpWebRequest)WebRequest.Create("ftp://" + _Host + path + shortName);
             ftpRequest.Credentials = new NetworkCredential(_UserName, _Password);
@@ -212,7 +212,7 @@ namespace FTP_client
 
             foreach (string file in files)
             {
-                UploadFile(uploadPath + "/" + Path.GetFileName(file), file);
+                UploadFile(uploadPath + "/" + PathGetFileName(file), file);
             }
 
             foreach (string subDir in subDirs)
